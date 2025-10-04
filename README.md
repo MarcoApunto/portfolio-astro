@@ -12,10 +12,6 @@ Este sitio web está desarrollado con [Astro](https://astro.build/) y [Tailwind 
 - **Accesibilidad y buenas prácticas**.
 - **Código modular y limpio**.
 
-## 📸 Vista previa
-
-![Vista previa del portfolio](src/assets/me-portfolio.png)
-
 ## 🛠️ Tecnologías utilizadas
 
 - [Astro](https://astro.build/) – Framework web moderno
