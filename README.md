@@ -17,10 +17,6 @@ Este sitio web está desarrollado con [Astro](https://astro.build/) y [Tailwind 
 - [Astro](https://astro.build/) – Framework web moderno
 - [Tailwind CSS](https://tailwindcss.com/) – Utilidades CSS
 - [JavaScript (ES6+)](https://developer.mozilla.org/es/docs/Web/JavaScript)
-- [React](https://react.dev/) (en proyectos destacados)
-- [Node.js](https://nodejs.org/) y [Express.js](https://expressjs.com/) (en proyectos backend)
-- [MongoDB](https://www.mongodb.com/) y [MySQL](https://www.mysql.com/) (en proyectos backend)
-- [Cypress](https://www.cypress.io/), [Postman](https://www.postman.com/), [Docker](https://www.docker.com/) (en skills y proyectos)
 - [Font Awesome](https://fontawesome.com/) y [Material Icons](https://fonts.google.com/icons)
 
 ## 📂 Estructura del proyecto
