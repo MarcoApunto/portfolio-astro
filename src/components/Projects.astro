@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import projectOne from "@assets/project1.png";
+import projectTwo from "@assets/project2.png";
+import projectThree from "@assets/project3.png";
+---
+
+<section class="py-20" id="proyectos">
+  <div class="text-center mb-12">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-text-light-primary dark:text-text-dark-primary"
+    >
+      Proyectos Destacados
+    </h2>
+    <div class="mt-2 h-1 w-20 bg-primary mx-auto"></div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div
+      class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
+    >
+      <Image
+        alt="proyecto 1"
+        class="w-full h-56 object-cover"
+        src={projectOne}
+      />
+      <div class="p-6">
+        <h3
+          class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
+        >
+          Portfolio Web
+        </h3>
+        <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
+          Sitio web desarrollado con Astro y Tailwind CSS, optimizado para
+          rendimiento y diseño responsive. Presenta mis proyectos, experiencia y
+          contacto en una interfaz moderna, minimalista y rápida.
+        </p>
+        <a class="text-primary hover:underline" href="#">Ver proyecto →</a>
+      </div>
+    </div>
+    <div
+      class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
+    >
+      <Image
+        alt="proyecto 2"
+        class="w-full h-56 object-cover"
+        src={projectTwo}
+      />
+      <div class="p-6">
+        <h3
+          class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
+        >
+          Cult Of The Reader
+        </h3>
+        <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
+          Aplicación full stack de librería online con catálogo de libros,
+          autenticación de usuarios, carrito de compras y reseñas. Backend en
+          Node.js/Express con MongoDB y MySQL, autenticación JWT y documentación
+          Swagger. Frontend en React (Vite) con Context API, diseño responsive y
+          arquitectura por componentes.
+        </p>
+        <a
+          class="text-primary hover:underline"
+          href="https://github.com/Cult-of-the-Reader"
+          target="_blank">Ver proyecto →</a
+        >
+      </div>
+    </div>
+    <div
+      class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
+    >
+      <Image
+        alt="proyecto 3"
+        class="w-full h-56 object-cover"
+        src={projectThree}
+      />
+      <div class="p-6">
+        <h3
+          class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
+        >
+          QuizWhiz!
+        </h3>
+        <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
+          SPA de preguntas y respuestas que consume la Open Trivia Database API.
+          Presenta 10 preguntas dinámicas, guarda puntajes en LocalStorage y
+          muestra el historial con Chart.js. Desarrollado con HTML, CSS y
+          JavaScript (ES6+), con navegación sin recargas, manejo de estados y
+          visualización de resultados.
+        </p>
+        <a
+          class="text-primary hover:underline"
+          href="https://github.com/MarcoApunto/proyectoQuiz"
+          target="_blank">Ver proyecto →</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
