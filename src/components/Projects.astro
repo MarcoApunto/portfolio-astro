@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import actualProject from "@assets/actualProject.png";
 import projectOne from "@assets/project1.png";
 import projectTwo from "@assets/project2.png";
 import projectThree from "@assets/project3.png";
@@ -21,6 +22,33 @@ import projectThree from "@assets/project3.png";
       <Image
         alt="proyecto 1"
         class="w-full h-56 object-cover"
+        src={actualProject}
+      />
+      <div class="p-6">
+        <h3
+          class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
+        >
+          Strapi & Next.JS 16
+        </h3>
+        <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
+          Aplicación Next.js integrada con Strapi CMS headless para gestión de
+          contenido dinámico. Implementa autenticación con server actions,
+          consume API REST optimizada, cache estratégico y protección de rutas.
+          Incluye SEO, optimización de imágenes y deploy en producción.
+        </p>
+        <a
+          class="text-primary hover:underline"
+          href="https://github.com/MarcoApunto/my-strapi-project-with-next"
+          target="_blank">Ver proyecto →</a
+        >
+      </div>
+    </div>
+    <div
+      class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
+    >
+      <Image
+        alt="proyecto 1"
+        class="w-full h-56 object-cover"
         src={projectOne}
       />
       <div class="p-6">
@@ -34,7 +62,11 @@ import projectThree from "@assets/project3.png";
           rendimiento y diseño responsive. Presenta mis proyectos, experiencia y
           contacto en una interfaz moderna, minimalista y rápida.
         </p>
-        <a class="text-primary hover:underline" href="https://github.com/MarcoApunto/portfolio-astro" target="_blank">Ver proyecto →</a>
+        <a
+          class="text-primary hover:underline"
+          href="https://github.com/MarcoApunto/portfolio-astro"
+          target="_blank">Ver proyecto →</a
+        >
       </div>
     </div>
     <div
