@@ -1,6 +1,6 @@
 ---
-import SpeedInsights from '@vercel/speed-insights/astro';
-import Analytics from '@vercel/analytics/astro'
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 
 import "../styles/global.css";
 
@@ -11,6 +11,35 @@ import Footer from "@components/Footer.astro";
 <!doctype html>
 <html class="dark" lang="es">
   <head>
+    <meta
+      property="og:title"
+      content="Marco Ferreira — Desarrollador Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Código, café y algo de caos hasta que todo encaja."
+    />
+    <meta
+      property="og:image"
+      content="https://marcoferreira.vercel.app/_astro/me-portfolio.BNQlDuU3_hkqgy.webp"
+    />
+    <meta property="og:url" content="https://marcoferreira.vercel.app/" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Marco Ferreira — Desarrollador Full Stack"
+    />
+    <meta
+      name="twitter:description"
+      content="Código, café y algo de caos hasta que todo encaja."
+    />
+    <meta
+      name="twitter:image"
+      content="https://marcoferreira.vercel.app/_astro/me-portfolio.BNQlDuU3_hkqgy.webp"
+    />
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Marco Antonio Ferreira Santos - Portfolio</title>
@@ -40,6 +69,5 @@ import Footer from "@components/Footer.astro";
       <slot />
     </main>
     <Footer />
-  </body>
-  <script src="@scripts/buttons.js"></script>
+  </body><script src="@scripts/buttons.js"></script>
 </html>
