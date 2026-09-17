@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="py-24 md:py-32 text-center">
+    <p class="text-6xl md:text-8xl font-bold text-primary">404</p>
+    <h1
+      class="mt-6 text-3xl md:text-4xl font-bold text-text-light-primary dark:text-text-dark-primary"
+    >
+      Página no encontrada
+    </h1>
+    <p
+      class="mt-4 text-lg text-text-light-secondary dark:text-text-dark-secondary"
+    >
+      El enlace puede estar roto o la página pudo haberse movido.
+    </p>
+    <a
+      class="mt-8 inline-block px-8 py-3 bg-primary text-background-dark font-semibold rounded-lg shadow-lg hover:bg-primary/80 transition duration-300"
+      href="/"
+    >
+      Volver al inicio
+    </a>
+  </section>
+</Layout>

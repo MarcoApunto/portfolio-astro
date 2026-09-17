@@ -1,9 +1,53 @@
 ---
 import { Image } from "astro:assets";
+import padeliticos from "@assets/padeliticos.png";
 import actualProject from "@assets/actualProject.png";
 import projectOne from "@assets/project1.png";
 import projectTwo from "@assets/project2.png";
 import projectThree from "@assets/project3.png";
+
+const projects = [
+  {
+    img: padeliticos,
+    alt: "Vista de la pista de Padeliticos con equipos y ranking Elo",
+    title: "Padeliticos",
+    description:
+      "Gestor full stack de club de pádel con ranking Elo propio (individual y de parejas), temporadas y rondas, constructor de partidos con drag & drop, historial por jugador y zona de apuestas con 'Megalitos'. Backend Node.js/Express con MongoDB y autenticación por claves; frontend React (Vite) con @dnd-kit.",
+    href: "https://github.com/MarcoApunto/padeliticos",
+  },
+  {
+    img: actualProject,
+    alt: "Captura del proyecto Strapi & Next.JS 16",
+    title: "Strapi & Next.JS 16",
+    description:
+      "Aplicación Next.js integrada con Strapi CMS headless para gestión de contenido dinámico. Implementa autenticación con server actions, consume API REST optimizada, cache estratégico y protección de rutas. Incluye SEO, optimización de imágenes y deploy en producción.",
+    href: "https://github.com/MarcoApunto/my-strapi-project-with-next",
+  },
+  {
+    img: projectOne,
+    alt: "Captura del proyecto Portfolio Web",
+    title: "Portfolio Web",
+    description:
+      "Sitio web desarrollado con Astro y Tailwind CSS, optimizado para rendimiento y diseño responsive. Presenta mis proyectos, experiencia y contacto en una interfaz moderna, minimalista y rápida.",
+    href: "https://github.com/MarcoApunto/portfolio-astro",
+  },
+  {
+    img: projectTwo,
+    alt: "Captura del proyecto Cult Of The Reader",
+    title: "Cult Of The Reader",
+    description:
+      "Aplicación full stack de librería online con catálogo de libros, autenticación de usuarios, carrito de compras y reseñas. Backend en Node.js/Express con MongoDB y MySQL, autenticación JWT y documentación Swagger. Frontend en React (Vite) con Context API, diseño responsive y arquitectura por componentes.",
+    href: "https://github.com/Cult-of-the-Reader",
+  },
+  {
+    img: projectThree,
+    alt: "Captura del proyecto QuizWhiz!",
+    title: "QuizWhiz!",
+    description:
+      "SPA de preguntas y respuestas que consume la Open Trivia Database API. Presenta 10 preguntas dinámicas, guarda puntajes en LocalStorage y muestra el historial con Chart.js. Desarrollado con HTML, CSS y JavaScript (ES6+), con navegación sin recargas, manejo de estados y visualización de resultados.",
+    href: "https://github.com/MarcoApunto/proyectoQuiz",
+  },
+];
 ---
 
 <section class="py-20" id="proyectos">
@@ -16,114 +60,29 @@ import projectThree from "@assets/project3.png";
     <div class="mt-2 h-1 w-20 bg-primary mx-auto"></div>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div
-      class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
-    >
-      <Image
-        alt="proyecto 1"
-        class="w-full h-56 object-cover"
-        src={actualProject}
-      />
-      <div class="p-6">
-        <h3
-          class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
+    {
+      projects.map((project) => (
+        <div
+          class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
         >
-          Strapi & Next.JS 16
-        </h3>
-        <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
-          Aplicación Next.js integrada con Strapi CMS headless para gestión de
-          contenido dinámico. Implementa autenticación con server actions,
-          consume API REST optimizada, cache estratégico y protección de rutas.
-          Incluye SEO, optimización de imágenes y deploy en producción.
-        </p>
-        <a
-          class="text-primary hover:underline"
-          href="https://github.com/MarcoApunto/my-strapi-project-with-next"
-          target="_blank">Ver proyecto →</a
-        >
-      </div>
-    </div>
-    <div
-      class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
-    >
-      <Image
-        alt="proyecto 1"
-        class="w-full h-56 object-cover"
-        src={projectOne}
-      />
-      <div class="p-6">
-        <h3
-          class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
-        >
-          Portfolio Web
-        </h3>
-        <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
-          Sitio web desarrollado con Astro y Tailwind CSS, optimizado para
-          rendimiento y diseño responsive. Presenta mis proyectos, experiencia y
-          contacto en una interfaz moderna, minimalista y rápida.
-        </p>
-        <a
-          class="text-primary hover:underline"
-          href="https://github.com/MarcoApunto/portfolio-astro"
-          target="_blank">Ver proyecto →</a
-        >
-      </div>
-    </div>
-    <div
-      class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
-    >
-      <Image
-        alt="proyecto 2"
-        class="w-full h-56 object-cover"
-        src={projectTwo}
-      />
-      <div class="p-6">
-        <h3
-          class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
-        >
-          Cult Of The Reader
-        </h3>
-        <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
-          Aplicación full stack de librería online con catálogo de libros,
-          autenticación de usuarios, carrito de compras y reseñas. Backend en
-          Node.js/Express con MongoDB y MySQL, autenticación JWT y documentación
-          Swagger. Frontend en React (Vite) con Context API, diseño responsive y
-          arquitectura por componentes.
-        </p>
-        <a
-          class="text-primary hover:underline"
-          href="https://github.com/Cult-of-the-Reader"
-          target="_blank">Ver proyecto →</a
-        >
-      </div>
-    </div>
-    <div
-      class="bg-surface-light dark:bg-surface-dark rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 hover:shadow-primary/20 hover:shadow-lg"
-    >
-      <Image
-        alt="proyecto 3"
-        class="w-full h-56 object-cover"
-        src={projectThree}
-      />
-      <div class="p-6">
-        <h3
-          class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
-        >
-          QuizWhiz!
-        </h3>
-        <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
-          SPA de preguntas y respuestas que consume la Open Trivia Database API.
-          Presenta 10 preguntas dinámicas, guarda puntajes en LocalStorage y
-          muestra el historial con Chart.js. Desarrollado con HTML, CSS y
-          JavaScript (ES6+), con navegación sin recargas, manejo de estados y
-          visualización de resultados.
-        </p>
-        <a
-          class="text-primary hover:underline"
-          href="https://github.com/MarcoApunto/proyectoQuiz"
-          target="_blank">Ver proyecto →</a
-        >
-      </div>
-    </div>
+          <Image alt={project.alt} class="w-full h-56 object-cover" src={project.img} />
+          <div class="p-6">
+            <h3
+              class="text-xl font-semibold mb-2 text-text-light-primary dark:text-text-dark-primary"
+            >
+              {project.title}
+            </h3>
+            <p class="text-text-light-secondary dark:text-text-dark-secondary mb-4">
+              {project.description}
+            </p>
+            <a
+              class="text-primary hover:underline"
+              href={project.href}
+              target="_blank">Ver proyecto →</a
+            >
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>

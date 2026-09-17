@@ -26,44 +26,30 @@
   --radius-default: 0.5rem;
 }
 
-/* 3) usa @theme inline + @layer base para exponer vars que puedas cambiar en :root/.dark
-   (esto permite behaviors runtime y mantiene compatibilidad con tu JS toggle) */
-@theme inline {
-  --color-background: var(--color-background);
-  --color-surface: var(--color-surface);
-  --color-text-primary: var(--color-text-primary);
-  --color-text-secondary: var(--color-text-secondary);
-  --font-display: var(--font-display);
-  --radius-default: var(--radius-default);
-}
-
 @layer base {
-  :root {
-    /* valores por defecto (light) */
-    --color-background: var(--color-background-light);
-    --color-surface: var(--color-surface-light);
-    --color-text-primary: var(--color-text-light-primary);
-    --color-text-secondary: var(--color-text-light-secondary);
-    --font-display: "Space Grotesk", sans-serif;
-    --radius-default: 0.5rem;
-  }
-
   html {
     scroll-behavior: smooth;
   }
 
-  html.dark {
-    --color-background: var(--color-background-dark);
-    --color-surface: var(--color-surface-dark);
-    --color-text-primary: var(--color-text-dark-primary);
-    --color-text-secondary: var(--color-text-dark-secondary);
+  :root {
+    color-scheme: light;
   }
 
-  /* helpers opcionales si quieres mantener nombres concretos en HTML */
+  html.dark {
+    color-scheme: dark;
+  }
+
+  /* helpers para mantener nombres concretos en el HTML */
   .font-display {
     font-family: var(--font-display);
   }
   .rounded {
     border-radius: var(--radius-default);
+  }
+
+  /* sección activa en la navegación (scrollspy) */
+  nav a[aria-current="true"],
+  #mobile-menu a[aria-current="true"] {
+    color: var(--color-primary);
   }
 }

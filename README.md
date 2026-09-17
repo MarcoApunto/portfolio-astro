@@ -77,4 +77,4 @@ Este sitio web está desarrollado con [Astro](https://astro.build/) y [Tailwind 
 
 ---
 
-**© 2025 Marco Antonio Ferreira Santos**
+**© 2026 Marco Antonio Ferreira Santos**

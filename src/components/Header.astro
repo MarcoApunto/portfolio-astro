@@ -4,9 +4,15 @@
       <div
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <a class="text-2xl font-bold text-primary" href="#" id="logo">M.A.F.S.</a>
+        <a
+          class="text-2xl font-bold text-primary"
+          href="#"
+          id="logo"
+          aria-label="Ir al inicio"
+          >M.A.F.S.</a
+        >
         <div class="flex items-center">
-          <nav class="hidden md:flex space-x-6">
+          <nav class="hidden md:flex space-x-6" aria-label="Navegación principal">
             <a
               class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
               href="#about">Sobre Mí</a
@@ -31,21 +37,26 @@
           <button
             class="ml-6  text-text-light-primary dark:text-text-dark-primary"
             id="theme-toggle"
+            aria-label="Cambiar tema claro u oscuro"
+            aria-pressed="false"
           >
-            <span class="material-icons">brightness_6</span>
-
+            <span class="material-icons" aria-hidden="true">brightness_6</span>
           </button>
           <button
             class="md:hidden ml-4 text-text-light-primary dark:text-text-dark-primary"
             id="mobile-menu-button"
+            aria-label="Abrir menú"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
           >
-            <span class="material-icons">menu</span>
+            <span class="material-icons" aria-hidden="true">menu</span>
           </button>
         </div>
       </div>
       <div
         class="hidden md:hidden bg-surface-light dark:bg-surface-dark px-6 pt-2 pb-4"
         id="mobile-menu"
+        aria-label="Menú de navegación"
       >
         <a
           class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"

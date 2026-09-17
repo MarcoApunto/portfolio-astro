@@ -2,28 +2,41 @@
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
 
+import { getImage } from "astro:assets";
+import profileImage from "@assets/me-portfolio.png";
+
 import "../styles/global.css";
 
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+
+const site = "https://marcoferreira.vercel.app";
+const ogImage = await getImage({ src: profileImage, format: "webp", width: 1200, height: 630, fit: "cover" });
+const ogImageUrl = site + ogImage.src;
 ---
 
 <!doctype html>
 <html class="dark" lang="es">
   <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Marco Antonio Ferreira Santos - Portfolio</title>
     <meta
-      property="og:title"
-      content="Marco Ferreira — Desarrollador Full Stack"
+      name="description"
+      content="Código, café y algo de caos hasta que todo encaja. Portfolio de Marco Antonio Ferreira Santos, desarrollador Full Stack MERN."
     />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={site + Astro.url.pathname} />
+
+    <meta property="og:site_name" content="Marco Ferreira — Portfolio" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Marco Ferreira — Desarrollador Full Stack" />
     <meta
       property="og:description"
       content="Código, café y algo de caos hasta que todo encaja."
     />
-    <meta
-      property="og:image"
-      content="https://marcoferreira.vercel.app/_astro/me-portfolio.BNQlDuU3_hkqgy.webp"
-    />
-    <meta property="og:url" content="https://marcoferreira.vercel.app/" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:url" content={site + Astro.url.pathname} />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -35,14 +48,21 @@ import Footer from "@components/Footer.astro";
       name="twitter:description"
       content="Código, café y algo de caos hasta que todo encaja."
     />
-    <meta
-      name="twitter:image"
-      content="https://marcoferreira.vercel.app/_astro/me-portfolio.BNQlDuU3_hkqgy.webp"
-    />
+    <meta name="twitter:image" content={ogImageUrl} />
 
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Marco Antonio Ferreira Santos - Portfolio</title>
+    <script is:inline>
+      // Restaura el tema guardado antes del primer paint (evita parpadeo)
+      try {
+        var savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.classList.toggle(
+            "dark",
+            savedTheme === "dark"
+          );
+        }
+      } catch (e) {}
+    </script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -55,9 +75,6 @@ import Footer from "@components/Footer.astro";
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <script
-      src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"
-    ></script>
     <Analytics />
     <SpeedInsights />
   </head>
@@ -69,5 +86,6 @@ import Footer from "@components/Footer.astro";
       <slot />
     </main>
     <Footer />
-  </body><script src="@scripts/buttons.js"></script>
+    <script src="@scripts/buttons.js"></script>
+  </body>
 </html>
