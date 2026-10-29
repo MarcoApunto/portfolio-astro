@@ -1,100 +1,96 @@
-    <header
-      class="bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm shadow-md sticky top-0 z-50"
+<header
+  class="bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm shadow-md sticky top-0 z-50"
+>
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a
+      class="inline-flex items-center rounded-lg transition-transform duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      href="#"
+      id="logo"
+      aria-label="Marco Antonio Ferreira Santos — Ir al inicio"
     >
-      <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
-      >
+      <img
+        src="/logo.svg"
+        alt=""
+        width="40"
+        height="40"
+        class="h-10 w-10"
+        loading="eager"
+      />
+    </a>
+    <div class="flex items-center">
+      <nav class="hidden md:flex space-x-6" aria-label="Navegación principal">
         <a
-          class="inline-flex items-center rounded-lg transition-transform duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          href="#"
-          id="logo"
-          aria-label="Marco Antonio Ferreira Santos — Ir al inicio"
-        >
-          <img
-            src="/logo.svg"
-            alt=""
-            width="40"
-            height="40"
-            class="h-10 w-10"
-            loading="eager"
-          />
-        </a>
-        <div class="flex items-center">
-          <nav class="hidden md:flex space-x-6" aria-label="Navegación principal">
-            <a
-              class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
-              href="#about">Sobre Mí</a
-            >
-            <a
-              class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
-              href="#skills">Habilidades</a
-            >
-            <a
-              class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
-              href="#proyectos">Proyectos</a
-            >
-            <a
-              class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
-              href="#experience">Experiencia</a
-            >
-            
-            <a
-              class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
-              href="#education">Educación</a
-            >
-            <a
-              class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
-              href="#contact">Contacto</a
-            >
-          </nav>
-          <button
-            class="ml-6  text-text-light-primary dark:text-text-dark-primary"
-            id="theme-toggle"
-            aria-label="Cambiar tema claro u oscuro"
-            aria-pressed="false"
-          >
-            <span class="material-icons" aria-hidden="true">brightness_6</span>
-          </button>
-          <button
-            class="md:hidden ml-4 text-text-light-primary dark:text-text-dark-primary"
-            id="mobile-menu-button"
-            aria-label="Abrir menú"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-          >
-            <span class="material-icons" aria-hidden="true">menu</span>
-          </button>
-        </div>
-      </div>
-      <div
-        class="hidden md:hidden bg-surface-light dark:bg-surface-dark px-6 pt-2 pb-4"
-        id="mobile-menu"
-        aria-label="Menú de navegación"
-      >
-        <a
-          class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+          class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
           href="#about">Sobre Mí</a
         >
         <a
-          class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+          class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
           href="#skills">Habilidades</a
         >
         <a
-          class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+          class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+          href="#experience">Experiencia</a
+        >
+        <a
+          class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
           href="#proyectos">Proyectos</a
         >
         <a
-          class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
-          href="#experience">Experiencia</a
-        >
-        
-        <a
-          class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+          class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
           href="#education">Educación</a
         >
         <a
-          class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+          class="text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
           href="#contact">Contacto</a
         >
-      </div>
-    </header>
+      </nav>
+      <button
+        class="ml-6 text-text-light-primary dark:text-text-dark-primary"
+        id="theme-toggle"
+        aria-label="Cambiar tema claro u oscuro"
+        aria-pressed="false"
+      >
+        <span class="material-icons" aria-hidden="true">brightness_6</span>
+      </button>
+      <button
+        class="md:hidden ml-4 text-text-light-primary dark:text-text-dark-primary"
+        id="mobile-menu-button"
+        aria-label="Abrir menú"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span class="material-icons" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <div
+    class="hidden md:hidden bg-surface-light dark:bg-surface-dark px-6 pt-2 pb-4"
+    id="mobile-menu"
+    aria-label="Menú de navegación"
+  >
+    <a
+      class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+      href="#about">Sobre Mí</a
+    >
+    <a
+      class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+      href="#skills">Habilidades</a
+    >
+    <a
+      class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+      href="#experience">Experiencia</a
+    >
+    <a
+      class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+      href="#proyectos">Proyectos</a
+    >
+    <a
+      class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+      href="#education">Educación</a
+    >
+    <a
+      class="block py-2 text-text-light-primary dark:text-text-dark-primary hover:text-primary transition duration-300"
+      href="#contact">Contacto</a
+    >
+  </div>
+</header>
