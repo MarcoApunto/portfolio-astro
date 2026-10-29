@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="MAFS">
+  <rect x="6" y="6" width="116" height="116" rx="29" fill="#0E0E1A"/>
+  <g fill="none" stroke="#2FA394" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M38 47L26 64L38 81"/>
+    <path d="M90 47L102 64L90 81"/>
+  </g>
+  <path d="M51 82V46L64 67L77 46V82" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

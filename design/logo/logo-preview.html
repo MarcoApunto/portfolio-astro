@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo final — MAFS Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Space Grotesk', system-ui, sans-serif; margin: 0; padding: 40px; background: #f6f7f9; color: #1c1c2e; }
+    h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -.02em; }
+    h2 { font-size: 17px; margin: 0 0 14px; letter-spacing: -.01em; }
+    .sub { color: #5a5a72; margin: 0 0 32px; max-width: 760px; line-height: 1.6; }
+    .card { background: #fff; border: 1px solid #e4e6ec; border-radius: 18px; padding: 28px; margin-bottom: 24px; }
+    .row { display: flex; gap: 24px; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .panel { border-radius: 14px; padding: 28px; display: flex; align-items: center; justify-content: center; min-height: 210px; flex: 1; min-width: 200px; }
+    .light { background: #f0f2f5; }
+    .dark { background: #0a0a14; }
+    .label { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: #5a5a72; margin-bottom: 12px; text-align: center; }
+    .dark .label { color: #a0a0c0; }
+    .big { width: 128px; height: 128px; }
+    .sizes { display: flex; gap: 28px; align-items: flex-end; margin-top: 24px; padding-top: 24px; border-top: 1px solid #eceef3; }
+    .sizes figure { margin: 0; text-align: center; }
+    .sizes figcaption { font-size: 10px; color: #5a5a72; margin-top: 8px; }
+    .tab { width: 16px; height: 16px; }
+    .f32 { width: 32px; height: 32px; }
+    .f48 { width: 48px; height: 48px; }
+    .f180 { width: 90px; height: 90px; border-radius: 18px; }
+    /* simulación de la cabecera real */
+    .hdr { background: rgba(255,255,255,.8); backdrop-filter: blur(4px); border-radius: 12px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+    .hdr.dark { background: rgba(28,28,46,.8); }
+    .hdr .mark { width: 40px; height: 40px; }
+    .hdr nav { display: flex; gap: 22px; font-size: 14px; color: #1c1c2e; }
+    .hdr.dark nav { color: #e0e0ff; }
+    .tokens { display: flex; gap: 12px; flex-wrap: wrap; }
+    .tok { display: flex; align-items: center; gap: 9px; font-size: 13px; color: #5a5a72; border: 1px solid #e4e6ec; border-radius: 999px; padding: 7px 14px 7px 7px; }
+    .sw { width: 22px; height: 22px; border-radius: 6px; }
+    code { background: #eef0f4; padding: 2px 7px; border-radius: 5px; font-size: 12px; }
+    .alts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; }
+    .alt { border: 1px solid #e4e6ec; border-radius: 14px; padding: 18px; text-align: center; }
+    .alt img { width: 76px; height: 76px; }
+    .alt p { font-size: 11px; color: #5a5a72; margin: 10px 0 0; }
+    .note { font-size: 13px; color: #5a5a72; background: #f6f7f9; border-radius: 10px; padding: 12px 15px; margin-top: 20px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h1>Logo final — ⟨M⟩</h1>
+  <p class="sub">Marca definitiva del portfolio. Fondo oscuro <code>#0E0E1A</code>, brackets de código teal <code>#2FA394</code> y una M blanca. Se usa sola en la cabecera (sin texto) y como favicon del navegador.</p>
+
+  <div class="card">
+    <h2>La marca</h2>
+    <div class="row">
+      <div class="panel light"><div><div class="label">Fondo claro</div><img class="big" src="logo-final.svg" alt="Logo MAFS"></div></div>
+      <div class="panel dark"><div><div class="label">Fondo oscuro</div><img class="big" src="logo-final.svg" alt="Logo MAFS"></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Cabecera — sólo la marca, sin texto</h2>
+    <div class="row">
+      <div class="hdr" style="flex:1;">
+        <img class="mark" src="logo-final.svg" alt="">
+        <nav><span>Sobre Mí</span><span>Habilidades</span><span>Proyectos</span><span>Educación</span><span>Contacto</span></nav>
+      </div>
+      <div class="hdr dark" style="flex:1;">
+        <img class="mark" src="logo-final.svg" alt="">
+        <nav><span>Sobre Mí</span><span>Habilidades</span><span>Proyectos</span><span>Educación</span><span>Contacto</span></nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Tamaños reales</h2>
+    <div class="sizes">
+      <figure><img class="f48" src="favicon-final.svg" alt=""><figcaption>48 px</figcaption></figure>
+      <figure><img class="f32" src="favicon-final.svg" alt=""><figcaption>32 px</figcaption></figure>
+      <figure><img class="tab" src="favicon-final.svg" alt=""><figcaption>16 px (pestaña)</figcaption></figure>
+      <figure><img class="f180" src="apple-touch-icon.png" alt=""><figcaption>180 px (iOS)</figcaption></figure>
+    </div>
+    <p class="note">El favicon mantiene los <strong>dos brackets</strong> y ensancha ligeramente la M respecto a la marca grande, para que el logo se lea entero a 16 px sin que la M se mezcle con los brackets.</p>
+  </div>
+
+  <div class="card">
+    <h2>Colores</h2>
+    <div class="tokens">
+      <div class="tok"><span class="sw" style="background:#0E0E1A"></span> #0E0E1A — fondo</div>
+      <div class="tok"><span class="sw" style="background:#2FA394"></span> #2FA394 — brackets</div>
+      <div class="tok"><span class="sw" style="background:#ffffff;border:1px solid #d5d8e0"></span> #FFFFFF — M</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Descartadas</h2>
+    <div class="alts">
+      <div class="alt"><img src="logo-a.svg" alt=""><p>A — M limpia sobre teal</p></div>
+      <div class="alt"><img src="logo-c.svg" alt=""><p>C — prompt de terminal</p></div>
+      <div class="alt"><img src="logo-d.svg" alt=""><p>D — M geométrica plana</p></div>
+      <div class="alt"><img src="logo-concept-1.svg" alt=""><p>Concepto 1 — original</p></div>
+      <div class="alt"><img src="logo-concept-2.svg" alt=""><p>Concepto 2 — original</p></div>
+      <div class="alt"><img src="logo-concept-3.svg" alt=""><p>Concepto 3 — original</p></div>
+      <div class="alt"><img src="favicon-new.svg" alt=""><p>Favicon por letras</p></div>
+    </div>
+  </div>
+</body>
+</html>
